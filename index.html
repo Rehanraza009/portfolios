@@ -1,632 +1,1818 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rehan Raza - Creative Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Primary Meta Tags -->
+    <title>Rehan Raza — Software Engineer &amp; Data Science Specialist</title>
+    <meta name="title" content="Rehan Raza — Software Engineer &amp; Data Science Specialist">
+    <meta name="description" content="Portfolio of Rehan Raza: B.Tech Computer Science &amp; Engineering (Data Science) student at Galgotias University '27. Specializing in Software Engineering, Full-Stack Development, Cloud Data Pipelines, and Applied AI.">
+    <meta name="keywords" content="Rehan Raza, Software Engineer, Data Science, Galgotias University, SATQuery AI, RideMesh, TestHub, AWS Cloud, Full-Stack Developer">
+    <meta name="author" content="Rehan Raza">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rehanraza009.github.io/portfolios/">
+    <meta property="og:title" content="Rehan Raza — Software Engineer &amp; Data Science Specialist">
+    <meta property="og:description" content="Explore verified AI/ML projects, full-stack applications, cloud data engineering pipelines, and authentic certificates of Rehan Raza.">
+    <meta property="og:image" content="assets/images/rehan.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rehanraza009.github.io/portfolios/">
+    <meta property="twitter:title" content="Rehan Raza — Software Engineer &amp; Data Science Specialist">
+    <meta property="twitter:description" content="Explore verified AI/ML projects, full-stack applications, and authentic certificates of Rehan Raza.">
+    <meta property="twitter:image" content="assets/images/rehan.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/rehan_cutout.png">
+
+    <!-- Google Fonts: Outfit, JetBrains Mono, and Caveat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6.5.1 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap 5.3.2 Grid CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Anti-Flash Theme Engine Initialization -->
+    <script>
+        (function() {
+            const saved = localStorage.getItem('rehan_portfolio_theme');
+            const theme = saved ? saved : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    
+    <!-- Custom Master Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="dark">
+<body>
 
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
+    <!-- Accessible Skip Link -->
+    <a href="#about" class="skip-link">Skip to main content</a>
 
-    <button class="theme-toggle" id="theme-toggle">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-    </button>
+    <!-- Top Scroll Progress Indicator -->
+    <div id="scroll-progress" aria-hidden="true"></div>
 
-    <header class="main-header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="site-logo" href="#hero">REHAN<span class="logo-dot">.</span></a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- Mouse-Following Ambient Light Glow -->
+    <div id="ambient-mouse-glow" aria-hidden="true"></div>
 
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
+    <!-- Background Atmospheric Gradient Mesh -->
+    <div class="cinematic-backdrop-layer" aria-hidden="true"></div>
+
+    <!-- ==============================================
+         HEADER & NAVIGATION
+         ============================================== -->
+    <header class="studio-header">
+        <div class="container-fluid px-lg-5">
+            <nav class="studio-navbar">
+                <!-- Hexagon Logo Icon + Rehan Raza -->
+                <a href="#hero" class="nav-brand-group">
+                    <div class="hexagon-logo-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <span class="brand-title">Rehan Raza</span>
+                </a>
+
+                <!-- Center Nav Links -->
+                <ul class="nav-menu-list" id="nav-menu-list">
+                    <li><a href="#hero" class="nav-menu-link active">Home</a></li>
+                    <li><a href="#about" class="nav-menu-link">About</a></li>
+                    <li><a href="#skills" class="nav-menu-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-menu-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-menu-link">Experience</a></li>
+                    <li><a href="#certifications" class="nav-menu-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-menu-link">Contact</a></li>
+                </ul>
+
+                <!-- Right Nav Controls -->
+                <div class="nav-right-controls">
+                    <a href="#contact" class="btn-nav-connect d-none d-sm-inline-flex">
+                        <span>Let's Connect</span>
+                    </a>
+
+                    <!-- Theme Toggle Pill Switch -->
+                    <div class="theme-pill-switch" id="theme-pill-switch" title="Toggle Dark/Light Mode" aria-label="Toggle dark or light theme">
+                        <span class="theme-icon-slot sun"><i class="fas fa-sun"></i></span>
+                        <span class="theme-icon-slot moon"><i class="fas fa-moon"></i></span>
+                    </div>
+
+                    <!-- Mobile Drawer Toggler -->
+                    <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
-    <main class="content-sections">
+    <main id="main-content">
 
-        <section id="hero" class="hero-section section-padding">
-            <div class="hero-bg-effects">
-                <div class="floating-shapes shape-1"></div>
-                <div class="floating-shapes shape-2"></div>
-                <div class="floating-shapes shape-3"></div>
-                <div class="grid-overlay"></div>
-            </div>
-            <div class="container">
-                <div class="row align-items-center min-vh-100">
-                    <div class="col-lg-6 hero-text-content">
-                        <div class="available-badge">
-                            <span class="pulse-dot"></span>
-                            Available to Work
-                        </div>
-                        <h1 class="name">
-                            Hi, I'm <span class="name-highlight">Rehan Raza</span>
-                        </h1>
-                        <p class="tagline">
-                            <span class="type-text" data-words='["Data Scientist", "Web Developer", "Problem Solver", "Creative Coder"]'></span>
-                        </p>
-                        <p class="hero-description">
-                            B.Tech Data Science student at Galgotias University, passionate about leveraging data-driven solutions and building modern web experiences.
-                        </p>
-                        <div class="hero-stats animate-reveal">
-                            <div class="hero-stat-item">
-                                <span class="stat-number" data-count="6">6+</span>
+        <!-- ==============================================
+             01 // HERO SECTION (Developer Workspace Aesthetic + 3D Portrait)
+             ============================================== -->
+        <section id="hero" class="hero-section">
+            <div class="container-fluid px-lg-5">
                 
-                                <span class="stat-label">PROJECTS DONE</span>
+                <div class="hero-panoramic-card">
+                    <!-- Understated Developer Workspace Background Visual -->
+                    <div class="hero-bg-media" aria-hidden="true">
+                        <div class="hero-abstract-tech-bg">
+                            <svg class="hero-tech-grid-svg" viewBox="0 0 1400 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <pattern id="heroGridPattern" width="36" height="36" patternUnits="userSpaceOnUse">
+                                        <path d="M 36 0 L 0 0 0 36" fill="none" stroke="rgba(56, 189, 248, 0.06)" stroke-width="1"/>
+                                    </pattern>
+                                    <radialGradient id="workspaceGlow" cx="72%" cy="42%" r="58%">
+                                        <stop offset="0%" stop-color="rgba(56, 189, 248, 0.2)"/>
+                                        <stop offset="45%" stop-color="rgba(59, 130, 246, 0.09)"/>
+                                        <stop offset="100%" stop-color="transparent"/>
+                                    </radialGradient>
+                                    <linearGradient id="codeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="rgba(56, 189, 248, 0.45)"/>
+                                        <stop offset="100%" stop-color="rgba(139, 92, 246, 0.35)"/>
+                                    </linearGradient>
+                                </defs>
+                                
+                                <!-- Technical Grid -->
+                                <rect width="100%" height="100%" fill="url(#heroGridPattern)"/>
+                                <rect width="100%" height="100%" fill="url(#workspaceGlow)"/>
+
+                                <!-- Workstation / Computer Monitor Silhouette Outline -->
+                                <g class="workspace-silhouette" opacity="0.48" transform="translate(680, 70)">
+                                    <!-- Ultrawide Curved Monitor Frame -->
+                                    <rect x="50" y="40" width="580" height="320" rx="14" fill="rgba(8, 14, 28, 0.58)" stroke="rgba(56, 189, 248, 0.24)" stroke-width="1.8"/>
+                                    
+                                    <!-- Monitor Stand & Base -->
+                                    <path d="M310 360 L310 440 L240 455 L440 455 L370 440 L370 360 Z" fill="rgba(15, 23, 42, 0.65)" stroke="rgba(56, 189, 248, 0.22)" stroke-width="1.5"/>
+                                    <line x1="220" y1="455" x2="460" y2="455" stroke="rgba(56, 189, 248, 0.35)" stroke-width="2"/>
+
+                                    <!-- Monitor Top Bar & Window Controls -->
+                                    <line x1="50" y1="72" x2="630" y2="72" stroke="rgba(56, 189, 248, 0.16)" stroke-width="1"/>
+                                    <circle cx="74" cy="56" r="3.5" fill="#f43f5e" opacity="0.65"/>
+                                    <circle cx="86" cy="56" r="3.5" fill="#f59e0b" opacity="0.65"/>
+                                    <circle cx="98" cy="56" r="3.5" fill="#10b981" opacity="0.65"/>
+                                    <text x="120" y="60" fill="rgba(148, 163, 184, 0.5)" font-family="monospace" font-size="11">neural_query_engine.ts</text>
+
+                                    <!-- Code Editor Lines in Silhouette -->
+                                    <g opacity="0.8" transform="translate(74, 95)">
+                                        <rect x="0" y="0" width="16" height="8" rx="2" fill="rgba(56, 189, 248, 0.3)"/>
+                                        <rect x="26" y="0" width="70" height="8" rx="2" fill="#38bdf8" opacity="0.45"/>
+                                        <rect x="104" y="0" width="120" height="8" rx="2" fill="url(#codeGrad)"/>
+
+                                        <rect x="0" y="18" width="16" height="8" rx="2" fill="rgba(56, 189, 248, 0.2)"/>
+                                        <rect x="40" y="18" width="90" height="8" rx="2" fill="rgba(139, 92, 246, 0.45)"/>
+                                        <rect x="138" y="18" width="160" height="8" rx="2" fill="rgba(56, 189, 248, 0.35)"/>
+
+                                        <rect x="0" y="36" width="16" height="8" rx="2" fill="rgba(56, 189, 248, 0.2)"/>
+                                        <rect x="40" y="36" width="180" height="8" rx="2" fill="rgba(56, 189, 248, 0.35)"/>
+
+                                        <rect x="0" y="54" width="16" height="8" rx="2" fill="rgba(56, 189, 248, 0.2)"/>
+                                        <rect x="60" y="54" width="110" height="8" rx="2" fill="#10b981" opacity="0.45"/>
+                                        <rect x="178" y="54" width="95" height="8" rx="2" fill="rgba(56, 189, 248, 0.25)"/>
+
+                                        <rect x="0" y="72" width="16" height="8" rx="2" fill="rgba(56, 189, 248, 0.2)"/>
+                                        <rect x="40" y="72" width="60" height="8" rx="2" fill="rgba(139, 92, 246, 0.35)"/>
+                                    </g>
+
+                                    <!-- Miniature Embedded Terminal Panel in Monitor -->
+                                    <g transform="translate(350, 190)" opacity="0.85">
+                                        <rect x="0" y="0" width="260" height="150" rx="8" fill="rgba(4, 8, 16, 0.82)" stroke="rgba(56, 189, 248, 0.22)" stroke-width="1"/>
+                                        <line x1="0" y1="24" x2="260" y2="24" stroke="rgba(56, 189, 248, 0.14)" stroke-width="1"/>
+                                        <circle cx="14" cy="12" r="2.5" fill="rgba(56, 189, 248, 0.55)"/>
+                                        <circle cx="24" cy="12" r="2.5" fill="rgba(56, 189, 248, 0.35)"/>
+                                        <text x="36" y="16" fill="rgba(148, 163, 184, 0.45)" font-family="monospace" font-size="9">bash - terminal</text>
+                                        <text x="14" y="48" fill="#10b981" font-family="monospace" font-size="10" opacity="0.85">&gt; git commit -m &quot;feat: vlm-v2&quot;</text>
+                                        <text x="14" y="68" fill="rgba(148, 163, 184, 0.65)" font-family="monospace" font-size="9">[main 4c89f2a] 8 files compiled</text>
+                                        <text x="14" y="88" fill="#38bdf8" font-family="monospace" font-size="10" opacity="0.85">&gt; pnpm build:production [OK]</text>
+                                        <rect x="14" y="104" width="8" height="12" fill="#38bdf8" opacity="0.8" class="terminal-cursor-blink"/>
+                                    </g>
+                                </g>
+
+                                <!-- Circuit Nodes & Data-Flow Lines -->
+                                <path d="M 80 120 L 320 120 L 440 220 L 760 220" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1.5" stroke-dasharray="6 6"/>
+                                <path d="M 220 520 L 520 520 L 640 420 L 1120 420" stroke="rgba(59, 130, 246, 0.25)" stroke-width="1.5" stroke-dasharray="6 6"/>
+                                <circle cx="440" cy="220" r="4.5" fill="#38bdf8" opacity="0.75"/>
+                                <circle cx="760" cy="220" r="4.5" fill="#38bdf8" opacity="0.75"/>
+                                <circle cx="640" cy="420" r="4.5" fill="#3b82f6" opacity="0.75"/>
+                            </svg>
+                        </div>
+                        <div class="hero-bg-gradient-overlay"></div>
+                    </div>
+
+                    <div class="row align-items-center hero-inner-row">
+                        <!-- Left Hero Narrative Column -->
+                        <div class="col-lg-7 hero-narrative-col">
+                            <!-- Restored "OPEN TO WORK" Label with Subtle Glowing Pulse Dot -->
+                            <div class="hero-category-label">
+                                <span class="hero-status-pulse-dot"></span>
+                                <span class="hero-status-text">OPEN TO WORK</span>
                             </div>
-                            <div class="hero-stat-item">
-                                <span class="stat-number" data-count="3">4+</span>
-                                <span class="stat-label">INTERNSHIPS</span>
+
+                            <h1 class="hero-name-title">Hi, I'm <span class="name-highlight">Rehan Raza</span></h1>
+                            
+                            <!-- Primary Title + Animated Role Line -->
+                            <div class="hero-headline-block">
+                                <div class="hero-headline-role">Software Engineer | Data Science Enthusiast</div>
+                                <div class="role-rotator-wrapper" aria-live="polite">
+                                    <span class="role-rotator-prefix">Focus: </span>
+                                    <span class="role-rotator-text" id="role-rotator-text">Building Full-Stack Applications</span>
+                                </div>
                             </div>
-                            <div class="hero-stat-item">
-                                <span class="stat-number" data-count="10">15+</span>
-                                <span class="stat-label">SKILLS</span>
+
+                            <!-- Refined Professional Introduction -->
+                            <p class="hero-bio-paragraph">
+                                Hi, I'm Rehan Raza, a B.Tech CSE (Data Science) student interested in software engineering, full-stack development, and building practical, data-driven applications. I enjoy exploring cloud technologies and AI/ML while turning complex problems into useful solutions.
+                            </p>
+
+                            <!-- Prominent CTAs -->
+                            <div class="hero-cta-buttons">
+                                <a href="#projects" class="btn-magnetic btn-magnetic-primary">
+                                    <span>View My Projects</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <button type="button" class="btn-magnetic btn-magnetic-resume" id="btn-hero-resumes" aria-haspopup="dialog" aria-controls="resume-modal">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>View Resumes</span>
+                                </button>
+                                <a href="#contact" class="btn-magnetic btn-magnetic-outline">
+                                    <span>Contact Me</span>
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+
+                            <!-- Verified Social Profiles -->
+                            <div class="hero-social-icons">
+                                <a href="https://github.com/Rehanraza009" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="GitHub Profile">
+                                    <i class="fab fa-github"></i> <span>GitHub</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/rehan-raza-b45bb6306" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn Profile">
+                                    <i class="fab fa-linkedin-in text-info"></i> <span>LinkedIn</span>
+                                </a>
+                                <a href="mailto:rehanraza000@gmail.com" class="hero-social-link" aria-label="Direct Email">
+                                    <i class="fas fa-envelope text-cyan"></i> <span>Email</span>
+                                </a>
                             </div>
                         </div>
-                        <div class="hero-btns animate-reveal">
-                            <a href="#contact" class="primary-btn">
-                                <span>Let's Talk</span>
-                                <i class="fas fa-paper-plane"></i>
-                            </a>
-                            <a href="#projects" class="secondary-btn">
-                                <span>View Projects</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
+
+                        <!-- Right Hero Portrait Column (Interactive 3D Portrait Treatment) -->
+                        <div class="col-lg-5 hero-portrait-col">
+                            <div class="hero-portrait-stage" id="hero-portrait-stage">
+                                <!-- Restrained Ambient Halo Behind Portrait -->
+                                <div class="hero-ambient-halo" aria-hidden="true"></div>
+
+                                <!-- Subtle 3D-Inspired Portrait Card -->
+                                <div class="hero-3d-portrait-card" id="hero-3d-card" tabindex="0" role="region" aria-label="Interactive 3D Portrait of Rehan Raza">
+                                    <!-- Studio Tech Backdrop inside card -->
+                                    <div class="portrait-card-layer portrait-backdrop-layer">
+                                        <div class="portrait-backdrop-grid"></div>
+                                        <div class="portrait-backdrop-glow"></div>
+                                    </div>
+
+                                    <!-- Foreground Portrait Subject: Rehan's genuine photo with passport crop -->
+                                    <div class="portrait-card-layer portrait-subject-layer">
+                                        <img src="assets/images/rehan_cutout.png" alt="Rehan Raza - Software Engineer &amp; Data Scientist" class="hero-portrait-subject-img" id="hero-portrait-img" loading="eager">
+                                    </div>
+
+                                    <!-- Dynamic Specular Glare -->
+                                    <div class="portrait-card-layer portrait-glare-layer" id="portrait-glare"></div>
+
+                                    <!-- Modern Portrait Glass Border -->
+                                    <div class="portrait-card-border"></div>
+
+                                    <!-- Docked Active Status Chip -->
+                                    <div class="portrait-floating-chip">
+                                        <span class="status-pulse-dot"></span>
+                                        <span>Full-Stack &amp; AI Engineer</span>
+                                    </div>
+                                </div>
+
+                                <!-- Outer Technology Focus Chips -->
+                                <div class="hero-orbit-badges">
+                                    <div class="orbit-badge badge-fullstack"><i class="fas fa-code text-cyan"></i> Full-Stack</div>
+                                    <div class="orbit-badge badge-datascience"><i class="fas fa-chart-line text-purple"></i> Data Science</div>
+                                    <div class="orbit-badge badge-cloud"><i class="fab fa-aws text-warning"></i> AWS Cloud</div>
+                                    <div class="orbit-badge badge-aiml"><i class="fas fa-brain text-success"></i> Applied AI</div>
+                                </div>
+
+                                <!-- Metrics Dock Positioned Cleanly Underneath -->
+                                <div class="hero-metrics-strip">
+                                    <div class="metric-mini-tile">
+                                        <h4>8</h4>
+                                        <span>Projects</span>
+                                    </div>
+                                    <div class="metric-mini-tile">
+                                        <h4>15+</h4>
+                                        <span>Technologies</span>
+                                    </div>
+                                    <div class="metric-mini-tile">
+                                        <h4>12</h4>
+                                        <span>Certifications</span>
+                                    </div>
+                                    <div class="metric-mini-tile">
+                                        <h4>5</h4>
+                                        <span>Internships</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="hero-visual">
-                            <div class="hero-profile-circle">
-                                <img src="assets/images/rehan.jpg" alt="Rehan Raza" class="hero-profile-photo">
-                                <div class="profile-dot"></div>
-                            </div>
+
+                    <!-- Bottom Metadata Row: Sparkline + Scroll Indicator -->
+                    <div class="hero-bottom-meta-row px-4 pb-3">
+                        <div class="metric-sparkline-card">
+                            <svg class="sparkline-svg" viewBox="0 0 140 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M2 20L22 10L38 24L55 6L72 26L90 12L108 22L124 4L138 18" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="sparkline-label">Turning Technologies into Real-World Solutions <i class="fas fa-arrow-right text-cyan ms-1"></i></span>
+                        </div>
+                        <div class="hero-scroll-indicator">
+                            <span class="mouse-icon"><span class="wheel-dot"></span></span>
+                            <span>SCROLL TO EXPLORE</span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <span>Scroll Down</span>
+
             </div>
         </section>
 
+        <!-- ==============================================
+             ABOUT ME SECTION (Animated Portrait on Viewport Entry, Balanced Highlights)
+             ============================================== -->
         <section id="about" class="about-section section-padding">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 animate-reveal">
-                        <div class="about-image-wrapper">
-                            <img src="assets/images/rehan.jpg" alt="About Me" class="about-image">
-                            <div class="experience-badge-about">
-                                <span class="badge-number">5+</span>
-                                <span class="badge-text">PROJECTS BUILT</span>
+            <div class="container-fluid px-lg-5">
+                <div class="about-reference-grid">
+                    <div class="row g-4 align-items-center">
+                        
+                        <!-- Left Column: Professional Narrative & 4 Evenly Aligned Highlight Cards -->
+                        <div class="col-lg-7 about-narrative-col">
+                            <div class="section-tag-kicker" id="about-label">
+                                <span class="kicker-accent-bar"></span>
+                                <span>ABOUT ME</span>
+                            </div>
+                            <h2 class="about-main-heading" id="about-heading">Driven by Curiosity,<br>Built for <span class="name-highlight">Impact</span></h2>
+                            
+                            <!-- Concise, authentic biography -->
+                            <p class="about-desc-text" id="about-bio">
+                                I'm a B.Tech CSE (Data Science) student at Galgotias University interested in building practical software, developing full-stack applications, and turning data into useful insights. I enjoy exploring cloud technologies and AI/ML while working on projects that solve real problems.
+                            </p>
+
+                            <!-- 4 Evenly Aligned Core Highlight Cards -->
+                            <div class="about-features-row" id="about-features">
+                                <div class="about-feat-card">
+                                    <div class="feat-icon-badge"><i class="fas fa-lightbulb"></i></div>
+                                    <div class="feat-content">
+                                        <h5>Problem Solver</h5>
+                                        <span>Analytical and structured approach to engineering challenges</span>
+                                    </div>
+                                </div>
+                                <div class="about-feat-card">
+                                    <div class="feat-icon-badge"><i class="fas fa-graduation-cap"></i></div>
+                                    <div class="feat-content">
+                                        <h5>Continuous Learner</h5>
+                                        <span>Constantly expanding skills in modern cloud and AI/ML stacks</span>
+                                    </div>
+                                </div>
+                                <div class="about-feat-card">
+                                    <div class="feat-icon-badge"><i class="fas fa-users"></i></div>
+                                    <div class="feat-content">
+                                        <h5>Team Player</h5>
+                                        <span>Collaborative, communicative, and adaptable in agile workflows</span>
+                                    </div>
+                                </div>
+                                <div class="about-feat-card">
+                                    <div class="feat-icon-badge"><i class="fas fa-laptop-code"></i></div>
+                                    <div class="feat-content">
+                                        <h5>Technology Enthusiast</h5>
+                                        <span>Passionate about converting concepts into functional tools</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="about-actions-wrap d-flex flex-wrap align-items-center gap-3">
+                                <button type="button" class="btn-magnetic btn-magnetic-primary" id="btn-about-resumes" aria-haspopup="dialog" aria-controls="resume-modal">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>View Resumes</span>
+                                </button>
+                                <a href="#contact" class="btn-magnetic btn-magnetic-outline">
+                                    <span>Let's Connect</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-7 animate-reveal">
-                        <div class="about-text-content">
-                            <span class="title-subtext">GET TO KNOW ME</span>
-                            <h2 class="about-main-title">About Me</h2>
-                            <p class="section-description">
-                               I  am  a  B.Tech  Data  Science  student  at  Galgotias  University  skilled  in  Python  and  Java, with  interests  in  Data Science  and  Web Development. I  build  real-world  projects  like  Stock Bazaar,Online Examination System, and  Hangman Game,  focusing  on  practical  problem-solving  and  clean  UI.
-                            </p>
-                            <p class="section-description">
-                               Currently working on my final year project, I am actively seeking internship opportunities to apply my skills and gain industry experience.
-                            </p>
-                            <div class="about-info-grid-new">
-                                <div class="info-item">
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <span>B.Tech Data Science</span>
+
+                        <!-- Right Column: Rehan's Authentic Portrait with Entrance Animation & Academic Details -->
+                        <div class="col-lg-5">
+                            <div class="about-portrait-interactive-stage" id="about-portrait-stage">
+                                <!-- Ambient lighting aura -->
+                                <div class="about-ambient-glow" aria-hidden="true"></div>
+
+                                <!-- Holographic Glass Card (Animated smoothly into view on scroll / About click) -->
+                                <div class="about-holographic-glass-card" id="about-card">
+                                    <!-- Genuine Photograph in Clean Editorial Frame -->
+                                    <div class="about-photo-frame" id="about-photo-frame">
+                                        <div class="about-photo-backdrop"></div>
+                                        <img src="assets/images/rehan_cutout.png" alt="Rehan Raza - Software Engineer" class="about-real-photo" id="about-portrait-img" loading="lazy">
+                                        <div class="glass-reflection-overlay"></div>
+                                        <div class="frame-tech-accent top-left"></div>
+                                        <div class="frame-tech-accent bottom-right"></div>
+                                    </div>
+
+                                    <!-- Academic Details Under Photo (Strictly verified) -->
+                                    <div class="about-academic-meta">
+                                        <div class="academic-row">
+                                            <i class="fas fa-graduation-cap text-cyan"></i>
+                                            <div>
+                                                <strong>B.Tech CSE (Data Science)</strong>
+                                                <span>Galgotias University • 2023–2027</span>
+                                            </div>
+                                        </div>
+                                        <div class="academic-row">
+                                            <i class="fas fa-location-dot text-danger"></i>
+                                            <div>
+                                                <strong>Location</strong>
+                                                <span>Greater Noida, India</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Personal Quote Box with Cursive Signature -->
+                                    <div class="about-quote-box">
+                                        <i class="fas fa-quote-left text-cyan me-1"></i>
+                                        <span>"I believe in building real solutions that create impact."</span>
+                                        <div class="about-cursive-author">— Rehan Raza</div>
+                                    </div>
                                 </div>
-                                <div class="info-item">
-                                    <i class="fas fa-university"></i>
-                                    <span>Galgotias University</span>
-                                </div>
-                                <div class="info-item">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>India</span>
-                                </div>
-                                <div class="info-item">
-                                    <i class="fas fa-search"></i>
-                                    <span>Open to Intern</span>
-                                </div>
-                            </div>
-                            <div class="personal-info-row">
-                                <div class="info-group">
-                                    <span class="info-label">NAME</span>
-                                    <span class="info-value">Rehan Raza</span>
-                                </div>
-                                <div class="info-group">
-                                    <span class="info-label">EMAIL</span>
-                                    <span class="info-value">099rehan@gmail.com</span>
-                                </div>
-                            </div>
-                            <div class="about-btns">
-                                <a href="#contact" class="primary-btn">Hire Me</a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ==============================================
+             TECHNICAL EXPERTISE SECTION (Redesigned Segmented Control & Enhanced Skill Tiles)
+             ============================================== -->
         <section id="skills" class="skills-section section-padding">
-            <div class="container">
-                <div class="section-title">
-                    <span class="title-subtext">WHAT I KNOW</span>
-                    <h2 class="title-text">Skills & Technologies</h2>
-                    <p class="section-description text-center mx-auto" style="max-width: 700px;">
-                        My toolkit spans across programming, data science, and modern web development technologies.
-                    </p>
-                </div>
+            <div class="container-fluid px-lg-5">
                 
-                <div class="skills-grid-new animate-reveal">
-                    <!-- Programming -->
-                    <div class="skill-card-new">
-                        <div class="skill-card-icon">
-                            <i class="fas fa-code"></i>
+                <div class="row g-4 align-items-stretch">
+                    
+                    <!-- Left Skills Grid Column -->
+                    <div class="col-lg-8">
+                        <div class="section-tag-kicker" id="skills-label">
+                            <span class="kicker-accent-bar"></span>
+                            <span>TECHNICAL EXPERTISE</span>
                         </div>
-                        <h3>Programming</h3>
-                        <div class="skill-tags">
-                            <span>Python</span>
-                            <span>Java</span>
-                            <span>C</span>
-                            <span>SQL</span>
+                        <h3 class="section-title-bold mb-1">Core Technologies &amp; Engineering Toolkit</h3>
+                        <p class="text-secondary mb-4" style="font-size: 0.92rem;">A comprehensive overview of programming languages, frameworks, cloud services, and developer tools I build with.</p>
+
+                        <!-- Polished Glass Segmented Control Bar -->
+                        <div class="skills-segmented-bar-wrapper mb-4">
+                            <div class="skills-segmented-bar" role="tablist" aria-label="Filter Technical Skills by Category">
+                                <button class="skill-filter-btn active" data-skill-filter="all" role="tab" aria-selected="true">
+                                    <i class="fas fa-layer-group"></i> <span>All</span>
+                                </button>
+                                <button class="skill-filter-btn" data-skill-filter="languages" role="tab" aria-selected="false">
+                                    <i class="fas fa-code"></i> <span>Languages</span>
+                                </button>
+                                <button class="skill-filter-btn" data-skill-filter="frontend" role="tab" aria-selected="false">
+                                    <i class="fas fa-desktop"></i> <span>Frontend</span>
+                                </button>
+                                <button class="skill-filter-btn" data-skill-filter="backend" role="tab" aria-selected="false">
+                                    <i class="fas fa-server"></i> <span>Backend</span>
+                                </button>
+                                <button class="skill-filter-btn" data-skill-filter="database" role="tab" aria-selected="false">
+                                    <i class="fas fa-database"></i> <span>Databases</span>
+                                </button>
+                                <button class="skill-filter-btn" data-skill-filter="cloud" role="tab" aria-selected="false">
+                                    <i class="fas fa-cloud"></i> <span>Cloud</span>
+                                </button>
+                                <button class="skill-filter-btn" data-skill-filter="data" role="tab" aria-selected="false">
+                                    <i class="fas fa-chart-pie"></i> <span>Data Science</span>
+                                </button>
+                                <button class="skill-filter-btn" data-skill-filter="aiml" role="tab" aria-selected="false">
+                                    <i class="fas fa-brain"></i> <span>AI/ML</span>
+                                </button>
+                                <button class="skill-filter-btn" data-skill-filter="tools" role="tab" aria-selected="false">
+                                    <i class="fas fa-toolbox"></i> <span>Tools</span>
+                                </button>
+                            </div>
                         </div>
-                        <div class="skill-card-progress">
-                            <div class="progress-bar-new" style="width: 85%;"></div>
+
+                        <!-- Squircle Tile Grid (24 Verified Technologies with Enhanced Presentation) -->
+                        <div class="skills-tile-grid">
+                            <!-- Languages -->
+                            <div class="skill-tile" data-skill-cat="languages">
+                                <div class="skill-tile-icon-wrap"><i class="fab fa-python text-warning"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">Python</span>
+                                    <span class="skill-tile-cat">Language</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="languages">
+                                <div class="skill-tile-icon-wrap"><i class="fab fa-java text-danger"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">Java</span>
+                                    <span class="skill-tile-cat">Language</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="languages">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-terminal text-info"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">C++</span>
+                                    <span class="skill-tile-cat">Language</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="languages">
+                                <div class="skill-tile-icon-wrap"><i class="fab fa-js-square text-warning"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">JavaScript</span>
+                                    <span class="skill-tile-cat">Language</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="languages">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-file-code text-primary"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">TypeScript</span>
+                                    <span class="skill-tile-cat">Language</span>
+                                </div>
+                            </div>
+
+                            <!-- Frontend -->
+                            <div class="skill-tile" data-skill-cat="frontend">
+                                <div class="skill-tile-icon-wrap"><i class="fab fa-react text-cyan"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">React</span>
+                                    <span class="skill-tile-cat">Frontend</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="frontend">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-n text-white"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">Next.js</span>
+                                    <span class="skill-tile-cat">Frontend</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="frontend">
+                                <div class="skill-tile-icon-wrap"><i class="fab fa-html5 text-danger"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">HTML5</span>
+                                    <span class="skill-tile-cat">Frontend</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="frontend">
+                                <div class="skill-tile-icon-wrap"><i class="fab fa-css3-alt text-primary"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">CSS3</span>
+                                    <span class="skill-tile-cat">Frontend</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="frontend">
+                                <div class="skill-tile-icon-wrap"><i class="fab fa-bootstrap text-purple"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">Bootstrap</span>
+                                    <span class="skill-tile-cat">Frontend</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="frontend">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-wind text-cyan"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">Tailwind</span>
+                                    <span class="skill-tile-cat">Frontend</span>
+                                </div>
+                            </div>
+
+                            <!-- Backend -->
+                            <div class="skill-tile" data-skill-cat="backend">
+                                <div class="skill-tile-icon-wrap"><i class="fab fa-node-js text-success"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">Node.js</span>
+                                    <span class="skill-tile-cat">Backend</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="backend">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-server text-secondary"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">Express.js</span>
+                                    <span class="skill-tile-cat">Backend</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="backend">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-bolt text-warning"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">FastAPI</span>
+                                    <span class="skill-tile-cat">Backend</span>
+                                </div>
+                            </div>
+
+                            <!-- Databases -->
+                            <div class="skill-tile" data-skill-cat="database">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-database text-success"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">MongoDB</span>
+                                    <span class="skill-tile-cat">Database</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="database">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-table text-primary"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">MySQL</span>
+                                    <span class="skill-tile-cat">Database</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="database">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-layer-group text-info"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">PostgreSQL</span>
+                                    <span class="skill-tile-cat">Database</span>
+                                </div>
+                            </div>
+
+                            <!-- Cloud -->
+                            <div class="skill-tile" data-skill-cat="cloud">
+                                <div class="skill-tile-icon-wrap"><i class="fab fa-aws text-warning"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">AWS Cloud</span>
+                                    <span class="skill-tile-cat">Cloud</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="cloud">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-cloud text-cyan"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">S3 / Glue</span>
+                                    <span class="skill-tile-cat">Cloud</span>
+                                </div>
+                            </div>
+
+                            <!-- Tools -->
+                            <div class="skill-tile" data-skill-cat="tools">
+                                <div class="skill-tile-icon-wrap"><i class="fab fa-git-alt text-danger"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">Git</span>
+                                    <span class="skill-tile-cat">DevTool</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="tools">
+                                <div class="skill-tile-icon-wrap"><i class="fab fa-github"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">GitHub</span>
+                                    <span class="skill-tile-cat">DevTool</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="tools">
+                                <div class="skill-tile-icon-wrap"><i class="fab fa-docker text-cyan"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">Docker</span>
+                                    <span class="skill-tile-cat">DevTool</span>
+                                </div>
+                            </div>
+
+                            <!-- Data Science & AI/ML -->
+                            <div class="skill-tile" data-skill-cat="data">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-chart-pie text-purple"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">Data Analytics</span>
+                                    <span class="skill-tile-cat">Analytics</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="aiml">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-brain text-info"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">Machine Learning</span>
+                                    <span class="skill-tile-cat">AI / ML</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="data">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-table text-warning"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">Pandas</span>
+                                    <span class="skill-tile-cat">Analytics</span>
+                                </div>
+                            </div>
+                            <div class="skill-tile" data-skill-cat="data">
+                                <div class="skill-tile-icon-wrap"><i class="fas fa-cube text-primary"></i></div>
+                                <div class="skill-tile-info">
+                                    <span class="skill-tile-name">NumPy</span>
+                                    <span class="skill-tile-cat">Analytics</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Data Science -->
-                    <div class="skill-card-new">
-                        <div class="skill-card-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Data Science</h3>
-                        <div class="skill-tags">
-                            <span>Pandas</span>
-                            <span>NumPy</span>
-                            <span>ML / AI</span>
-                            <span>Matplotlib</span>
-                            <span>Seaborn</span>
-                            <span>Tableau</span>
-                        </div>
-                        <div class="skill-card-progress">
-                            <div class="progress-bar-new" style="width: 80%;"></div>
+                    <!-- Right Companion Card: Core Engineering Capabilities (NO FAKE PERCENTAGES) -->
+                    <div class="col-lg-4">
+                        <div class="data-to-impact-card">
+                            <div class="data-impact-header">
+                                <div>
+                                    <span class="kicker-accent-bar mb-2"></span>
+                                    <h4 class="data-impact-title">Architectural<br>Pillars</h4>
+                                </div>
+                                <div class="capability-badge-icon"><i class="fas fa-microchip text-cyan"></i></div>
+                            </div>
+                            <p class="data-impact-sub">
+                                Core engineering disciplines guiding my system architecture and production code.
+                            </p>
+
+                            <!-- Core Capability Cards -->
+                            <div class="capability-items-list">
+                                <div class="capability-card cap-fullstack">
+                                    <div class="cap-header">
+                                        <i class="fas fa-code text-cyan"></i>
+                                        <h5>Full-Stack Architecture</h5>
+                                    </div>
+                                    <p>Responsive SPAs, modular component systems, RESTful API design, state management.</p>
+                                    <div class="cap-tags">
+                                        <span>React</span><span>Next.js</span><span>Node.js</span><span>Express</span>
+                                    </div>
+                                </div>
+
+                                <div class="capability-card cap-datascience">
+                                    <div class="cap-header">
+                                        <i class="fas fa-chart-line text-purple"></i>
+                                        <h5>Data Science &amp; Analytics</h5>
+                                    </div>
+                                    <p>Exploratory data analysis, automated reporting pipelines, statistical summaries.</p>
+                                    <div class="cap-tags">
+                                        <span>Python</span><span>Pandas</span><span>NumPy</span><span>EDA</span>
+                                    </div>
+                                </div>
+
+                                <div class="capability-card cap-cloud">
+                                    <div class="cap-header">
+                                        <i class="fab fa-aws text-warning"></i>
+                                        <h5>Cloud Data Engineering</h5>
+                                    </div>
+                                    <p>Scalable storage, serverless queries, lakehouse patterns, ETL pipelines.</p>
+                                    <div class="cap-tags">
+                                        <span>AWS S3</span><span>Glue</span><span>Athena</span><span>Redshift</span>
+                                    </div>
+                                </div>
+
+                                <div class="capability-card cap-aiml">
+                                    <div class="cap-header">
+                                        <i class="fas fa-brain text-info"></i>
+                                        <h5>Applied AI &amp; Machine Learning</h5>
+                                    </div>
+                                    <p>Vision models, visual QA integration, model inference APIs, feature extraction.</p>
+                                    <div class="cap-tags">
+                                        <span>FastAPI</span><span>PyTorch</span><span>Computer Vision</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Web Development -->
-                    <div class="skill-card-new">
-                        <div class="skill-card-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h3>Web Development</h3>
-                        <div class="skill-tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>Bootstrap</span>
-                            <span>Django</span>
-                            <span>Backend</span>
-                        </div>
-                        <div class="skill-card-progress">
-                            <div class="progress-bar-new" style="width: 90%;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Tools & More -->
-                    <div class="skill-card-new">
-                        <div class="skill-card-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3>Tools & More</h3>
-                        <div class="skill-tags">
-                            <span>Git</span>
-                            <span>MySQL</span>
-                            <span>PostgreSQL</span>
-                            <span>VS Code</span>
-                            <span>Bootstrap</span>
-                        </div>
-                        <div class="skill-card-progress">
-                            <div class="progress-bar-new" style="width: 85%;"></div>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Tools Icon Grid (Keeping the existing one but styled better) -->
-                <div class="tools-grid animate-reveal">
-                    <div class="tool-item" title="VS Code"><i class="fas fa-code"></i></div>
-                    <div class="tool-item" title="Git"><i class="fab fa-git-alt"></i></div>
-                    <div class="tool-item" title="GitHub"><i class="fab fa-github"></i></div>
-                    <div class="tool-item" title="Docker"><i class="fab fa-docker"></i></div>
-                    <div class="tool-item" title="AWS"><i class="fab fa-aws"></i></div>
-                    <div class="tool-item" title="Linux"><i class="fab fa-linux"></i></div>
-                </div>
             </div>
         </section>
 
+        <!-- ==============================================
+             SELECTED PROJECTS SECTION (Complete 8 Projects)
+             ============================================== -->
         <section id="projects" class="projects-section section-padding">
-            <div class="container">
-                <div class="section-title animate-reveal">
-                    <span class="title-subtext">Portfolio</span>
-                    <h2 class="title-text">Featured Projects</h2>
-                </div>
-                <div class="row g-4">
-                    <!-- Project 1 -->
-                    <div class="col-lg-4 col-md-6 animate-reveal">
-                        <div class="project-card" data-project-id="1">
-                            <div class="project-image-container">
-                                <img src="assets/images/kisan_setu.jpg" alt="Kisan Setu" class="project-card-img">
-                                <div class="project-overlay">
-                                    <div class="project-icon-wrapper">
-                                        <i class="fas fa-seedling"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-details">
-                                <h3 class="project-title">Kisan Setu App</h3>
-                                <p class="project-text">Revolutionizing agricultural trade with real-time market insights and expert connectivity.</p>
-                                <div class="project-tech-stack">
-                                    <span>Android</span>
-                                    <span>Firebase</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/rehanraza099/Kisan-Setu" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                </div>
-                            </div>
+            <div class="container-fluid px-lg-5">
+                
+                <!-- Section Header with Mode Toggle and Arrows -->
+                <div class="reference-section-header mb-2">
+                    <div class="section-heading-main">
+                        <div class="section-tag-kicker mb-1" id="projects-label">
+                            <span class="kicker-accent-bar"></span>
+                            <span>SELECTED PROJECTS</span>
                         </div>
+                        <h3 class="section-title-bold">Projects that Solve Real Problems</h3>
+                        <p class="text-secondary mb-0" style="font-size: 0.92rem;">A selection of my best work. Explore live demos and source code.</p>
                     </div>
-
-                    <!-- Project 2 -->
-                    <div class="col-lg-4 col-md-6 animate-reveal">
-                        <div class="project-card" data-project-id="2">
-                            <div class="project-image-container">
-                                <img src="assets/images/stock_bazaar.jpg" alt="Stock Bazaar Pro" class="project-card-img">
-                                <div class="project-overlay">
-                                    <div class="project-icon-wrapper">
-                                        <i class="fas fa-chart-line"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-details">
-                                <h3 class="project-title">Stock Bazaar Pro</h3>
-                                <p class="project-text">Advanced stock analysis tool with ML-driven predictive insights and real-time tracking.</p>
-                                <div class="project-tech-stack">
-                                    <span>Python</span>
-                                    <span>ML</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/rehanraza099/Stock-Bazaar-Pro" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="col-lg-4 col-md-6 animate-reveal">
-                        <div class="project-card" data-project-id="3">
-                            <div class="project-image-container">
-                                <img src="online examinarion.jpeg" alt="Online Exam System" class="project-card-img">
-                                <div class="project-overlay">
-                                    <div class="project-icon-wrapper">
-                                        <i class="fas fa-user-check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-details">
-                                <h3 class="project-title">Online Exam System</h3>
-                                <p class="project-text">Secure and scalable platform for automated grading and real-time examination monitoring.</p>
-                                <div class="project-tech-stack">
-                                    <span>Java</span>
-                                    <span>MySQL</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/rehanraza099/Online-Examination-System" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div class="col-lg-4 col-md-6 animate-reveal">
-                        <div class="project-card" data-project-id="4">
-                            <div class="project-image-container">
-                                <img src="assets/images/hangman.jpg" alt="Hangman Game" class="project-card-img">
-                                <div class="project-overlay">
-                                    <div class="project-icon-wrapper">
-                                        <i class="fas fa-gamepad"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-details">
-                                <h3 class="project-title">Hangman Game</h3>
-                                <p class="project-text">Interactive word guessing game built with Python featuring custom themes and score tracking.</p>
-                                <div class="project-tech-stack">
-                                    <span>Python</span>
-                                    <span>CLI</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/rehanraza099/Hangman-Game" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 5 -->
-                    <div class="col-lg-4 col-md-6 animate-reveal">
-                        <div class="project-card" data-project-id="5">
-                            <div class="project-image-container">
-                                <img src="calculator.jpeg" alt="Scientific Calculator" class="project-card-img">
-                                <div class="project-overlay">
-                                    <div class="project-icon-wrapper">
-                                        <i class="fas fa-calculator"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-details">
-                                <h3 class="project-title">Scientific Calculator</h3>
-                                <p class="project-text">Modern web-based calculator supporting complex mathematical functions and dark mode.</p>
-                                <div class="project-tech-stack">
-                                    <span>HTML/CSS</span>
-                                    <span>JS</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/rehanraza099/Scientific-Calculator" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 6 -->
-                    <div class="col-lg-4 col-md-6 animate-reveal">
-                        <div class="project-card" data-project-id="6">
-                            <div class="project-image-container">
-                                <img src="assets/images/ipo_web_app.jpg" alt="IPO Web App" class="project-card-img">
-                                <div class="project-overlay">
-                                    <div class="project-icon-wrapper">
-                                        <i class="fas fa-globe"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-details">
-                                <h3 class="project-title">IPO Web App</h3>
-                                <p class="project-text">Full-stack IPO tracker with Django REST API and responsive Bootstrap interface.</p>
-                                <div class="project-tech-stack">
-                                    <span>Django</span>
-                                    <span>REST API</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/rehanraza099/IPO-Web-App" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="header-action-group">
+                        <button class="btn-ref-action btn-ref-secondary btn-view-mode-toggle" id="toggle-proj-view" title="Toggle Grid or Carousel View">
+                            <i class="fas fa-th-large me-1"></i> <span id="proj-view-text">Grid View</span>
+                        </button>
+                        <a href="https://github.com/Rehanraza009" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-secondary d-none d-sm-inline-flex">
+                            <span>View All on GitHub</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <button class="carousel-nav-btn" id="btn-proj-prev" aria-label="Previous Projects"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav-btn" id="btn-proj-next" aria-label="Next Projects"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
+
+                <!-- Project Category Filters -->
+                <div class="project-filter-row mb-4">
+                    <button class="project-filter-tab-btn active" data-proj-filter="all">All Projects (8)</button>
+                    <button class="project-filter-tab-btn" data-proj-filter="ai">AI / ML</button>
+                    <button class="project-filter-tab-btn" data-proj-filter="fullstack">Full-Stack</button>
+                    <button class="project-filter-tab-btn" data-proj-filter="data">Data &amp; Analytics</button>
+                    <button class="project-filter-tab-btn" data-proj-filter="tools">Tools &amp; Utilities</button>
+                </div>
+
+                <!-- Projects Track / Grid Container -->
+                <div class="carousel-track-container" id="projects-carousel-row">
+                    
+                    <!-- 1. SATQuery AI (Flagship Project with Live App) -->
+                    <div class="carousel-item-col" data-project-cat="ai">
+                        <div class="reference-project-card">
+                            <div class="ref-project-media">
+                                <img src="assets/images/satquery_preview.jpg" alt="SATQuery AI Satellite Geospatial Intelligence" class="ref-project-img" loading="lazy">
+                            </div>
+                            <div class="ref-project-body">
+                                <div class="ref-project-title-row">
+                                    <h4 class="ref-project-title">SATQuery AI</h4>
+                                    <span class="ref-badge-live"><i class="fas fa-circle text-success font-xs"></i> Live</span>
+                                </div>
+                                <p class="ref-project-desc">
+                                    AI-powered platform for satellite data query and analysis with modern web interface, SmolVLM-500M visual QA, and flood segmentation.
+                                </p>
+                                <div class="ref-tech-pills-row">
+                                    <span class="ref-tech-pill">Next.js</span>
+                                    <span class="ref-tech-pill">Python</span>
+                                    <span class="ref-tech-pill">AI/ML</span>
+                                    <span class="ref-tech-pill">FastAPI</span>
+                                </div>
+                                <div class="ref-project-actions">
+                                    <a href="https://sat-query-ai-pink.vercel.app/login" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-primary">
+                                        <i class="fas fa-external-link-alt me-1"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com/Rehanraza009/SatQuery-AI" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-secondary">
+                                        <i class="fab fa-github me-1"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. RideMesh -->
+                    <div class="carousel-item-col" data-project-cat="fullstack">
+                        <div class="reference-project-card">
+                            <div class="ref-project-media">
+                                <img src="assets/images/ridemesh_preview.jpg" alt="RideMesh Urban Carpooling Application" class="ref-project-img" loading="lazy">
+                            </div>
+                            <div class="ref-project-body">
+                                <div class="ref-project-title-row">
+                                    <h4 class="ref-project-title">RideMesh</h4>
+                                </div>
+                                <p class="ref-project-desc">
+                                    Smart urban carpooling application with dynamic route overlap matching, detour threshold calculation, and real-time GPS tracking.
+                                </p>
+                                <div class="ref-tech-pills-row">
+                                    <span class="ref-tech-pill">React 18</span>
+                                    <span class="ref-tech-pill">Capacitor</span>
+                                    <span class="ref-tech-pill">Firebase</span>
+                                    <span class="ref-tech-pill">Tailwind</span>
+                                </div>
+                                <div class="ref-project-actions">
+                                    <a href="https://github.com/Rehanraza009/RideMesh" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-secondary">
+                                        <i class="fab fa-github me-1"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. TestHub (Examination Portal) -->
+                    <div class="carousel-item-col" data-project-cat="fullstack">
+                        <div class="reference-project-card">
+                            <div class="ref-project-media">
+                                <img src="assets/images/online_examination.jpeg" alt="TestHub Online Examination Portal" class="ref-project-img" loading="lazy">
+                            </div>
+                            <div class="ref-project-body">
+                                <div class="ref-project-title-row">
+                                    <h4 class="ref-project-title">TestHub Portal</h4>
+                                    <span class="ref-badge-live"><i class="fas fa-circle text-success font-xs"></i> Live</span>
+                                </div>
+                                <p class="ref-project-desc">
+                                    Production-ready online examination web portal featuring instructor test creation, candidate timers, secure question banks, and automated scoring.
+                                </p>
+                                <div class="ref-tech-pills-row">
+                                    <span class="ref-tech-pill">JavaScript</span>
+                                    <span class="ref-tech-pill">Firebase</span>
+                                    <span class="ref-tech-pill">HTML5</span>
+                                    <span class="ref-tech-pill">CSS3</span>
+                                </div>
+                                <div class="ref-project-actions">
+                                    <a href="https://rehanraza009.github.io/TestHub/" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-primary">
+                                        <i class="fas fa-external-link-alt me-1"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com/Rehanraza009/TestHub" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-secondary">
+                                        <i class="fab fa-github me-1"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. IPO Web App -->
+                    <div class="carousel-item-col" data-project-cat="data">
+                        <div class="reference-project-card">
+                            <div class="ref-project-media">
+                                <img src="assets/images/ipo_web_app.jpg" alt="IPO Web App Dashboard" class="ref-project-img" loading="lazy">
+                            </div>
+                            <div class="ref-project-body">
+                                <div class="ref-project-title-row">
+                                    <h4 class="ref-project-title">IPO Web App</h4>
+                                </div>
+                                <p class="ref-project-desc">
+                                    Data-driven Initial Public Offering monitoring dashboard tracking live subscription rates, GMP trends, allotment status, and listing metrics.
+                                </p>
+                                <div class="ref-tech-pills-row">
+                                    <span class="ref-tech-pill">React</span>
+                                    <span class="ref-tech-pill">Node.js</span>
+                                    <span class="ref-tech-pill">Express</span>
+                                    <span class="ref-tech-pill">REST API</span>
+                                </div>
+                                <div class="ref-project-actions">
+                                    <a href="https://github.com/Rehanraza009/IPO-Web-App" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-secondary">
+                                        <i class="fab fa-github me-1"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Stock Bazaar Pro -->
+                    <div class="carousel-item-col" data-project-cat="data">
+                        <div class="reference-project-card">
+                            <div class="ref-project-media">
+                                <img src="assets/images/stock_bazaar.jpg" alt="Stock Bazaar Equity Screener" class="ref-project-img" loading="lazy">
+                            </div>
+                            <div class="ref-project-body">
+                                <div class="ref-project-title-row">
+                                    <h4 class="ref-project-title">Stock Bazaar Pro</h4>
+                                </div>
+                                <p class="ref-project-desc">
+                                    Real-time equity analytics &amp; market screener tracking price action, historical trends, financial indicators, and volume analytics.
+                                </p>
+                                <div class="ref-tech-pills-row">
+                                    <span class="ref-tech-pill">Python</span>
+                                    <span class="ref-tech-pill">Pandas</span>
+                                    <span class="ref-tech-pill">Streamlit</span>
+                                    <span class="ref-tech-pill">Financial APIs</span>
+                                </div>
+                                <div class="ref-project-actions">
+                                    <a href="https://github.com/Rehanraza009/Stock-Bazaar" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-secondary">
+                                        <i class="fab fa-github me-1"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. KisanSetu -->
+                    <div class="carousel-item-col" data-project-cat="fullstack">
+                        <div class="reference-project-card">
+                            <div class="ref-project-media">
+                                <img src="assets/images/kisan_setu.jpg" alt="KisanSetu Agricultural Marketplace" class="ref-project-img" loading="lazy">
+                            </div>
+                            <div class="ref-project-body">
+                                <div class="ref-project-title-row">
+                                    <h4 class="ref-project-title">KisanSetu</h4>
+                                </div>
+                                <p class="ref-project-desc">
+                                    Direct farm-to-consumer agricultural marketplace connecting rural producers with urban markets, reducing intermediary costs.
+                                </p>
+                                <div class="ref-tech-pills-row">
+                                    <span class="ref-tech-pill">React</span>
+                                    <span class="ref-tech-pill">Node.js</span>
+                                    <span class="ref-tech-pill">MongoDB</span>
+                                    <span class="ref-tech-pill">Express</span>
+                                </div>
+                                <div class="ref-project-actions">
+                                    <a href="https://github.com/Rehanraza009/KisanSetu" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-secondary">
+                                        <i class="fab fa-github me-1"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Scientific Web Calculator -->
+                    <div class="carousel-item-col" data-project-cat="tools">
+                        <div class="reference-project-card">
+                            <div class="ref-project-media">
+                                <img src="assets/images/calculator.jpeg" alt="Scientific Web Calculator" class="ref-project-img" loading="lazy">
+                            </div>
+                            <div class="ref-project-body">
+                                <div class="ref-project-title-row">
+                                    <h4 class="ref-project-title">Scientific Calculator</h4>
+                                    <span class="ref-badge-live"><i class="fas fa-circle text-success font-xs"></i> Live</span>
+                                </div>
+                                <p class="ref-project-desc">
+                                    Feature-rich mathematical computing application supporting trigonometric, logarithmic, algebraic computations, and calculation history.
+                                </p>
+                                <div class="ref-tech-pills-row">
+                                    <span class="ref-tech-pill">JavaScript</span>
+                                    <span class="ref-tech-pill">CSS3</span>
+                                    <span class="ref-tech-pill">HTML5</span>
+                                </div>
+                                <div class="ref-project-actions">
+                                    <a href="https://rehanraza009.github.io/Scientific-Calculator/" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-primary">
+                                        <i class="fas fa-external-link-alt me-1"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com/Rehanraza009/Scientific-Calculator" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-secondary">
+                                        <i class="fab fa-github me-1"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Developer Portfolio -->
+                    <div class="carousel-item-col" data-project-cat="fullstack">
+                        <div class="reference-project-card">
+                            <div class="ref-project-media">
+                                <img src="assets/images/satquery_preview.jpg" alt="Cinematic Developer Portfolio" class="ref-project-img" loading="lazy">
+                            </div>
+                            <div class="ref-project-body">
+                                <div class="ref-project-title-row">
+                                    <h4 class="ref-project-title">Developer Portfolio</h4>
+                                    <span class="ref-badge-live"><i class="fas fa-circle text-success font-xs"></i> Live</span>
+                                </div>
+                                <p class="ref-project-desc">
+                                    High-performance personal engineering portfolio showcasing interactive architectures, verified credentials, and real-world projects.
+                                </p>
+                                <div class="ref-tech-pills-row">
+                                    <span class="ref-tech-pill">HTML5</span>
+                                    <span class="ref-tech-pill">CSS3</span>
+                                    <span class="ref-tech-pill">JavaScript</span>
+                                    <span class="ref-tech-pill">GSAP</span>
+                                </div>
+                                <div class="ref-project-actions">
+                                    <a href="https://rehanraza009.github.io/portfolios/" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-primary">
+                                        <i class="fas fa-external-link-alt me-1"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com/Rehanraza009/portfolios" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-secondary">
+                                        <i class="fab fa-github me-1"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </section>
 
+        <!-- ==============================================
+             PROFESSIONAL EXPERIENCE SECTION (All 5 Roles)
+             ============================================== -->
         <section id="experience" class="experience-section section-padding">
-            <div class="container">
-                <div class="section-title animate-reveal">
-                    <span class="title-subtext">MY JOURNEY</span>
-                    <h2 class="title-text">Work Experience</h2>
-                </div>
-                <div class="modern-timeline animate-reveal">
-                    <!-- Internship 1 (AWS) -->
-                    <div class="timeline-card-wrapper left">
-                        <div class="timeline-date-badge">April 2026 - Present</div>
-                        <div class="timeline-dot-icon"><i class="fas fa-cloud"></i></div>
-                        <div class="experience-card-modern">
-                            <h3>AWS Data Engineering Virtual Intern</h3>
-                            <span class="company">@AICTE - EduSkills</span>
-                            <p>Gaining hands-on experience in building scalable data pipelines, data transformation, and storage solutions using AWS services like S3, Glue, Athena, and Redshift.</p>
-                            <div class="experience-tech">
-                                <span>AWS</span>
-                                <span>S3</span>
-                                <span>Glue</span>
-                                <span>Athena</span>
-                                <span>Python</span>
+            <div class="container-fluid px-lg-5">
+                
+                <div class="row g-4 align-items-stretch">
+                    
+                    <!-- Left Timeline Column -->
+                    <div class="col-lg-8">
+                        <div class="ref-timeline-card">
+                            <div class="section-tag-kicker mb-1" id="experience-label">
+                                <span class="kicker-accent-bar"></span>
+                                <span>PROFESSIONAL EXPERIENCE</span>
+                            </div>
+                            <h3 class="section-title-bold mb-1">My Professional Journey</h3>
+                            <p class="text-secondary mb-4" style="font-size: 0.92rem;">Real experiences, verified growth, real impact.</p>
+
+                            <!-- Timeline Entries (Reverse Chronological: All 5 Verified Roles) -->
+                            
+                            <!-- Role 1: VisioTechon Services (ACTIVE ROLE) -->
+                            <div class="timeline-item-entry active-role">
+                                <div class="timeline-dot-pin"></div>
+                                <div class="timeline-entry-content">
+                                    <div class="timeline-date-row">
+                                        <span class="timeline-date-text">OCT 2026 – PRESENT</span>
+                                        <span class="timeline-status-badge badge-active-green">
+                                            <span class="pulse-green-dot"></span> Active
+                                        </span>
+                                    </div>
+                                    <h4 class="timeline-role-name">Data Analytics Intern</h4>
+                                    <span class="timeline-org-name">VisioTechon Services</span>
+                                    <p class="timeline-desc-para">
+                                        Analyzing business performance datasets, building interactive exploratory dashboards, and automating statistical reports using Python, Pandas, NumPy, and modern data visualization tools.
+                                    </p>
+                                    <div class="ref-tech-pills-row mb-0">
+                                        <span class="ref-tech-pill">Python</span>
+                                        <span class="ref-tech-pill">Pandas</span>
+                                        <span class="ref-tech-pill">NumPy</span>
+                                        <span class="ref-tech-pill">Data Visualization</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Role 2: AICTE - EduSkills (COMPLETED ROLE) -->
+                            <div class="timeline-item-entry">
+                                <div class="timeline-dot-pin"></div>
+                                <div class="timeline-entry-content">
+                                    <div class="timeline-date-row">
+                                        <span class="timeline-date-text">APR 2026 – JUN 2026</span>
+                                        <span class="timeline-status-badge badge-completed-teal">Completed</span>
+                                    </div>
+                                    <h4 class="timeline-role-name">AWS Data Engineering Virtual Intern</h4>
+                                    <span class="timeline-org-name">AICTE – EduSkills</span>
+                                    <p class="timeline-desc-para">
+                                        Gained hands-on experience with scalable cloud data pipelines, data transformation, and storage solutions using AWS services including Amazon S3, AWS Glue, Amazon Athena, and Amazon Redshift.
+                                    </p>
+                                    <div class="ref-tech-pills-row mb-0">
+                                        <span class="ref-tech-pill">AWS</span>
+                                        <span class="ref-tech-pill">S3</span>
+                                        <span class="ref-tech-pill">Glue</span>
+                                        <span class="ref-tech-pill">Athena</span>
+                                        <span class="ref-tech-pill">Redshift</span>
+                                        <span class="ref-tech-pill">Data Pipelines</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Role 3: Google for Developers / EduSkills (COMPLETED ROLE) -->
+                            <div class="timeline-item-entry">
+                                <div class="timeline-dot-pin"></div>
+                                <div class="timeline-entry-content">
+                                    <div class="timeline-date-row">
+                                        <span class="timeline-date-text">OCT 2025 – DEC 2025</span>
+                                        <span class="timeline-status-badge badge-completed-teal">Completed</span>
+                                    </div>
+                                    <h4 class="timeline-role-name">AI-ML Virtual Intern</h4>
+                                    <span class="timeline-org-name">Google for Developers &amp; EduSkills</span>
+                                    <p class="timeline-desc-para">
+                                        Completed intensive 10-week AI/ML virtual internship supported by Google for Developers, focusing on foundational machine learning, computer vision, and neural network pipelines. (Grade: Outstanding)
+                                    </p>
+                                    <div class="ref-tech-pills-row mb-0">
+                                        <span class="ref-tech-pill">Python</span>
+                                        <span class="ref-tech-pill">Machine Learning</span>
+                                        <span class="ref-tech-pill">TensorFlow</span>
+                                        <span class="ref-tech-pill">Computer Vision</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Role 4: Zidio Development (COMPLETED ROLE) -->
+                            <div class="timeline-item-entry">
+                                <div class="timeline-dot-pin"></div>
+                                <div class="timeline-entry-content">
+                                    <div class="timeline-date-row">
+                                        <span class="timeline-date-text">AUG 2025 – NOV 2025</span>
+                                        <span class="timeline-status-badge badge-completed-teal">Completed</span>
+                                    </div>
+                                    <h4 class="timeline-role-name">Data Science &amp; Analytics Intern</h4>
+                                    <span class="timeline-org-name">Zidio Development</span>
+                                    <p class="timeline-desc-para">
+                                        Conducted exploratory data analysis, feature engineering, and statistical modeling on business datasets to drive data-driven decision making.
+                                    </p>
+                                    <div class="ref-tech-pills-row mb-0">
+                                        <span class="ref-tech-pill">Data Science</span>
+                                        <span class="ref-tech-pill">Analytics</span>
+                                        <span class="ref-tech-pill">Python</span>
+                                        <span class="ref-tech-pill">Statistics</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Role 5: Codec Technologies (COMPLETED ROLE) -->
+                            <div class="timeline-item-entry">
+                                <div class="timeline-dot-pin"></div>
+                                <div class="timeline-entry-content">
+                                    <div class="timeline-date-row">
+                                        <span class="timeline-date-text">JUL 2025 – AUG 2025</span>
+                                        <span class="timeline-status-badge badge-completed-teal">Completed</span>
+                                    </div>
+                                    <h4 class="timeline-role-name">Artificial Intelligence Intern</h4>
+                                    <span class="timeline-org-name">Codec Technologies</span>
+                                    <p class="timeline-desc-para">
+                                        Developed machine learning workflows and assisted in implementing artificial intelligence algorithms for applied business automation.
+                                    </p>
+                                    <div class="ref-tech-pills-row mb-0">
+                                        <span class="ref-tech-pill">AI</span>
+                                        <span class="ref-tech-pill">Machine Learning</span>
+                                        <span class="ref-tech-pill">Python</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Companion Column: Technical Telemetry & Architecture Visual -->
+                    <div class="col-lg-4">
+                        <!-- Cloud & Data Systems Telemetry Card -->
+                        <div class="technical-telemetry-card">
+                            <div class="telemetry-top">
+                                <span class="telemetry-kicker">SYSTEM ARCHITECTURE</span>
+                                <span class="telemetry-live-badge"><span class="pulse-green-dot"></span> Pipeline Active</span>
+                            </div>
+                            <h4 class="telemetry-title">Cloud &amp; Data Pipeline Flow</h4>
+                            
+                            <!-- Interactive SVG Pipeline Diagram -->
+                            <div class="telemetry-diagram-wrap">
+                                <div class="pipeline-step">
+                                    <div class="step-icon"><i class="fas fa-file-import text-cyan"></i></div>
+                                    <div class="step-info">
+                                        <h6>Data Ingestion</h6>
+                                        <span>Raw REST / Batch Streams</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-connector"><i class="fas fa-chevron-down"></i></div>
+                                <div class="pipeline-step">
+                                    <div class="step-icon"><i class="fab fa-aws text-warning"></i></div>
+                                    <div class="step-info">
+                                        <h6>AWS S3 Lakehouse</h6>
+                                        <span>Partitioned Cloud Storage</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-connector"><i class="fas fa-chevron-down"></i></div>
+                                <div class="pipeline-step">
+                                    <div class="step-icon"><i class="fas fa-gears text-purple"></i></div>
+                                    <div class="step-info">
+                                        <h6>AWS Glue &amp; Athena</h6>
+                                        <span>Automated ETL &amp; SQL Querying</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-connector"><i class="fas fa-chevron-down"></i></div>
+                                <div class="pipeline-step">
+                                    <div class="step-icon"><i class="fas fa-chart-column text-success"></i></div>
+                                    <div class="step-info">
+                                        <h6>Analytics &amp; Dashboards</h6>
+                                        <span>Actionable Insights &amp; Models</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="telemetry-stats-grid">
+                                <div class="telemetry-stat">
+                                    <h5>5</h5>
+                                    <span>Verified Roles</span>
+                                </div>
+                                <div class="telemetry-stat">
+                                    <h5>12</h5>
+                                    <span>Credentials</span>
+                                </div>
+                                <div class="telemetry-stat">
+                                    <h5>100%</h5>
+                                    <span>Authentic Data</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- What Drives Me Card -->
+                        <div class="what-drives-me-card mt-4">
+                            <h4 class="what-drives-title">What Drives My Engineering</h4>
+                            
+                            <div class="drive-item-list">
+                                <div class="drive-item-row">
+                                    <div class="drive-icon-circ text-cyan"><i class="fas fa-layer-group"></i></div>
+                                    <div class="drive-meta">
+                                        <h5>Build</h5>
+                                        <p>Real-world applications with measurable impact</p>
+                                    </div>
+                                </div>
+
+                                <div class="drive-item-row">
+                                    <div class="drive-icon-circ text-primary"><i class="fas fa-book-open"></i></div>
+                                    <div class="drive-meta">
+                                        <h5>Learn</h5>
+                                        <p>Master modern cloud and applied AI stacks</p>
+                                    </div>
+                                </div>
+
+                                <div class="drive-item-row">
+                                    <div class="drive-icon-circ text-warning"><i class="fas fa-magnifying-glass-chart"></i></div>
+                                    <div class="drive-meta">
+                                        <h5>Analyze</h5>
+                                        <p>Turn data into scalable, reproducible insights</p>
+                                    </div>
+                                </div>
+
+                                <div class="drive-item-row">
+                                    <div class="drive-icon-circ text-purple"><i class="fas fa-lightbulb"></i></div>
+                                    <div class="drive-meta">
+                                        <h5>Innovate</h5>
+                                        <p>Experiment with novel solutions for real problems</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Internship 2 (ML) -->
-                    <div class="timeline-card-wrapper right">
-                        <div class="timeline-date-badge">Oct 2025 - Dec 2025</div>
-                        <div class="timeline-dot-icon"><i class="fas fa-brain"></i></div>
-                        <div class="experience-card-modern">
-                            <h3>AI & Machine Learning Intern</h3>
-                            <span class="company">@EduSkills (Google for Developers)</span>
-                            <p>Completed intensive virtual internship focused on AI and Machine Learning. Worked on predictive modeling, data preprocessing, and deploying ML models for real-world applications.</p>
-                            <div class="experience-tech">
-                                <span>Python</span>
-                                <span>TensorFlow</span>
-                                <span>Machine Learning</span>
-                                <span>Data Science</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Internship 3 (Blue Stock) -->
-                    <div class="timeline-card-wrapper left">
-                        <div class="timeline-date-badge">July 2025 - Sep 2025</div>
-                        <div class="timeline-dot-icon"><i class="fas fa-code-branch"></i></div>
-                        <div class="experience-card-modern">
-                            <h3>Software Development Engineer Intern</h3>
-                            <span class="company">@Blue Stock Fintech</span>
-                            <p>Assisted in developing the IPO Web App and REST API for seamless integration with mobile applications. Built full-stack solutions with Django backend.</p>
-                            <div class="experience-tech">
-                                <span>Django</span>
-                                <span>REST API</span>
-                                <span>Python</span>
-                                <span>Web Dev</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+
             </div>
         </section>
 
+        <!-- ==============================================
+             CERTIFICATIONS SECTION (All 12 Verified Credentials)
+             ============================================== -->
         <section id="certifications" class="certifications-section section-padding">
-            <div class="container">
-                <div class="section-title animate-reveal">
-                    <span class="title-subtext">Achievements</span>
-                    <h2 class="title-text">Certifications</h2>
-                </div>
-                <div class="certifications-grid animate-reveal">
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fas fa-robot"></i></div>
-                        <div class="cert-info">
-                            <h4>GenAI Data Analytics</h4>
-                            <p>TATA | Forage</p>
+            <div class="container-fluid px-lg-5">
+                
+                <!-- Section Header with Mode Toggle and Arrows -->
+                <div class="reference-section-header mb-2">
+                    <div class="section-heading-main">
+                        <div class="section-tag-kicker mb-1" id="certifications-label">
+                            <span class="kicker-accent-bar"></span>
+                            <span>CERTIFICATIONS</span>
                         </div>
+                        <h3 class="section-title-bold">Verified Credentials</h3>
+                        <p class="text-secondary mb-0" style="font-size: 0.92rem;">Professional certifications and training from top global organizations.</p>
                     </div>
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
-                        <div class="cert-info">
-                            <h4>Software Engineering</h4>
-                            <p>JPMorgan Chase | Forage</p>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                        <div class="cert-info">
-                            <h4>Database Design</h4>
-                            <p>Oracle Academy</p>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                        <div class="cert-info">
-                            <h4>Alpha DSA with Java</h4>
-                            <p>Apna College</p>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                        <div class="cert-info">
-                            <h4>Data Analytics</h4>
-                            <p>Deloitte</p>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                        <div class="cert-info">
-                            <h4>Design Thinking</h4>
-                            <p>IIT Madras</p>
-                        </div>
+                    <div class="header-action-group">
+                        <button class="btn-ref-action btn-ref-secondary btn-view-mode-toggle" id="toggle-cert-view" title="Toggle Grid or Carousel View">
+                            <i class="fas fa-th-large me-1"></i> <span id="cert-view-text">Grid View</span>
+                        </button>
+                        <button class="carousel-nav-btn" id="btn-cert-prev" aria-label="Previous Certificates"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav-btn" id="btn-cert-next" aria-label="Next Certificates"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="contact" class="contact-section section-padding">
-            <div class="container">
-                <h2 class="section-title text-center">Let's Connect</h2>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 animate-reveal">
-                        <div class="contact-form-wrapper">
-                            <form id="contact-form" class="row g-3">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Full Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Email Address" required>
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" class="form-control" placeholder="Subject" required>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                                </div>
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="primary-btn">
-                                        <span>Send Message</span>
-                                        <i class="fas fa-paper-plane"></i>
+                <!-- Certification Category Filters -->
+                <div class="cert-filter-pills mb-4">
+                    <button class="cert-filter-tab-btn active" data-cert-filter="all">All Credentials (12)</button>
+                    <button class="cert-filter-tab-btn" data-cert-filter="cloud">AWS &amp; Cloud (4)</button>
+                    <button class="cert-filter-tab-btn" data-cert-filter="aiml">AI / ML &amp; Data (5)</button>
+                    <button class="cert-filter-tab-btn" data-cert-filter="simulation">Job Simulations (3)</button>
+                </div>
+
+                <!-- Certifications Track / Grid Container -->
+                <div class="carousel-track-container" id="certs-carousel-row">
+                    
+                    <!-- 1. AWS Technical Essentials -->
+                    <div class="cert-item-col" data-cert-cat="cloud">
+                        <div class="ref-cert-card">
+                            <div class="ref-cert-media btn-trigger-lightbox" data-cert-img="assets/certificates/cert_aws_technical_essentials.jpg" data-cert-title="AWS Technical Essentials" data-cert-issuer="Amazon Web Services (AWS)" data-cert-date="August 2026" data-cert-verify="">
+                                <img src="assets/certificates/cert_aws_technical_essentials.jpg" alt="AWS Technical Essentials" class="ref-cert-img" loading="lazy">
+                            </div>
+                            <div class="ref-cert-body">
+                                <h4 class="ref-cert-title">AWS Technical Essentials</h4>
+                                <span class="ref-cert-issuer">Amazon Web Services (AWS)</span>
+                                <span class="ref-cert-date">August 2026</span>
+                                <div class="ref-cert-actions">
+                                    <button class="ref-cert-link btn-trigger-lightbox" data-cert-img="assets/certificates/cert_aws_technical_essentials.jpg" data-cert-title="AWS Technical Essentials" data-cert-issuer="Amazon Web Services (AWS)" data-cert-date="August 2026" data-cert-verify="">
+                                        View Certificate <i class="fas fa-arrow-right ms-1"></i>
                                     </button>
                                 </div>
-                            </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. AWS ML Engineer Associate Curriculum -->
+                    <div class="cert-item-col" data-cert-cat="cloud">
+                        <div class="ref-cert-card">
+                            <div class="ref-cert-media btn-trigger-lightbox" data-cert-img="assets/certificates/cert_aws_ml_engineer.jpg" data-cert-title="AWS ML Engineer Associate Curriculum Overview" data-cert-issuer="Amazon Web Services (AWS)" data-cert-date="August 2026" data-cert-verify="">
+                                <img src="assets/certificates/cert_aws_ml_engineer.jpg" alt="AWS ML Engineer Associate" class="ref-cert-img" loading="lazy">
+                            </div>
+                            <div class="ref-cert-body">
+                                <h4 class="ref-cert-title">AWS ML Engineer Associate</h4>
+                                <span class="ref-cert-issuer">Amazon Web Services (AWS)</span>
+                                <span class="ref-cert-date">August 2026</span>
+                                <div class="ref-cert-actions">
+                                    <button class="ref-cert-link btn-trigger-lightbox" data-cert-img="assets/certificates/cert_aws_ml_engineer.jpg" data-cert-title="AWS ML Engineer Associate Curriculum Overview" data-cert-issuer="Amazon Web Services (AWS)" data-cert-date="August 2026" data-cert-verify="">
+                                        View Certificate <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Data Engineering on AWS – Foundations -->
+                    <div class="cert-item-col" data-cert-cat="cloud">
+                        <div class="ref-cert-card">
+                            <div class="ref-cert-media btn-trigger-lightbox" data-cert-img="assets/certificates/cert_aws_data_engineering_foundations.jpg" data-cert-title="Data Engineering on AWS – Foundations" data-cert-issuer="Amazon Web Services (AWS)" data-cert-date="August 2026" data-cert-verify="">
+                                <img src="assets/certificates/cert_aws_data_engineering_foundations.jpg" alt="Data Engineering on AWS Foundations" class="ref-cert-img" loading="lazy">
+                            </div>
+                            <div class="ref-cert-body">
+                                <h4 class="ref-cert-title">Data Engineering on AWS</h4>
+                                <span class="ref-cert-issuer">Amazon Web Services (AWS)</span>
+                                <span class="ref-cert-date">August 2026</span>
+                                <div class="ref-cert-actions">
+                                    <button class="ref-cert-link btn-trigger-lightbox" data-cert-img="assets/certificates/cert_aws_data_engineering_foundations.jpg" data-cert-title="Data Engineering on AWS – Foundations" data-cert-issuer="Amazon Web Services (AWS)" data-cert-date="August 2026" data-cert-verify="">
+                                        View Certificate <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Full Stack Development using MERN -->
+                    <div class="cert-item-col" data-cert-cat="aiml">
+                        <div class="ref-cert-card">
+                            <div class="ref-cert-media btn-trigger-lightbox" data-cert-img="assets/certificates/cert_codechef_mern_stack.jpg" data-cert-title="Full Stack Development using MERN" data-cert-issuer="CodeChef" data-cert-date="August 2026" data-cert-verify="">
+                                <img src="assets/certificates/cert_codechef_mern_stack.jpg" alt="Full Stack Development using MERN - CodeChef" class="ref-cert-img" loading="lazy">
+                            </div>
+                            <div class="ref-cert-body">
+                                <h4 class="ref-cert-title">Full Stack MERN Dev</h4>
+                                <span class="ref-cert-issuer">CodeChef</span>
+                                <span class="ref-cert-date">August 2026</span>
+                                <div class="ref-cert-actions">
+                                    <button class="ref-cert-link btn-trigger-lightbox" data-cert-img="assets/certificates/cert_codechef_mern_stack.jpg" data-cert-title="Full Stack Development using MERN" data-cert-issuer="CodeChef" data-cert-date="August 2026" data-cert-verify="">
+                                        View Certificate <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Google Cloud Gen AI Academy APAC 2026 -->
+                    <div class="cert-item-col" data-cert-cat="aiml">
+                        <div class="ref-cert-card">
+                            <div class="ref-cert-media btn-trigger-lightbox" data-cert-img="assets/certificates/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_Spn3dvK9YCDqenHpj_1753726216843_completion_certificate.jpg" data-cert-title="Google Cloud Gen AI Academy APAC 2026 Certificate" data-cert-issuer="Google Cloud Security" data-cert-date="July 2026" data-cert-verify="2026H2507GCGENAIAPACC2-P02136">
+                                <img src="assets/certificates/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_Spn3dvK9YCDqenHpj_1753726216843_completion_certificate.jpg" alt="Google Cloud Gen AI Academy Certificate" class="ref-cert-img" loading="lazy">
+                            </div>
+                            <div class="ref-cert-body">
+                                <h4 class="ref-cert-title">Google Cloud Gen AI Academy</h4>
+                                <span class="ref-cert-issuer">Google Cloud Security</span>
+                                <span class="ref-cert-date">July 2026 • ID: 2026H2507GCGENAIAPACC2-P02136</span>
+                                <div class="ref-cert-actions">
+                                    <button class="ref-cert-link btn-trigger-lightbox" data-cert-img="assets/certificates/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_Spn3dvK9YCDqenHpj_1753726216843_completion_certificate.jpg" data-cert-title="Google Cloud Gen AI Academy APAC 2026" data-cert-issuer="Google Cloud Security" data-cert-date="July 2026" data-cert-verify="2026H2507GCGENAIAPACC2-P02136">
+                                        View Certificate <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. AI Skills Passport for Older Adults (EY & Microsoft) -->
+                    <div class="cert-item-col" data-cert-cat="aiml">
+                        <div class="ref-cert-card">
+                            <div class="ref-cert-media btn-trigger-lightbox" data-cert-img="assets/certificates/cert_ey_ai_skills_passport.jpg" data-cert-title="AI Skills Passport for Older Adults" data-cert-issuer="EY &amp; Microsoft" data-cert-date="July 2026" data-cert-verify="">
+                                <img src="assets/certificates/cert_ey_ai_skills_passport.jpg" alt="AI Skills Passport - EY Microsoft" class="ref-cert-img" loading="lazy">
+                            </div>
+                            <div class="ref-cert-body">
+                                <h4 class="ref-cert-title">AI Skills Passport</h4>
+                                <span class="ref-cert-issuer">EY &amp; Microsoft</span>
+                                <span class="ref-cert-date">July 2026</span>
+                                <div class="ref-cert-actions">
+                                    <button class="ref-cert-link btn-trigger-lightbox" data-cert-img="assets/certificates/cert_ey_ai_skills_passport.jpg" data-cert-title="AI Skills Passport for Older Adults" data-cert-issuer="EY &amp; Microsoft" data-cert-date="July 2026" data-cert-verify="">
+                                        View Certificate <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. All India NCAT 2026 -->
+                    <div class="cert-item-col" data-cert-cat="aiml">
+                        <div class="ref-cert-card">
+                            <div class="ref-cert-media btn-trigger-lightbox" data-cert-img="assets/certificates/cert_naukri_ncat_2026.jpg" data-cert-title="All India NCAT 2026" data-cert-issuer="Naukri Campus" data-cert-date="June 2026" data-cert-verify="">
+                                <img src="assets/certificates/cert_naukri_ncat_2026.jpg" alt="All India NCAT 2026 - Naukri Campus" class="ref-cert-img" loading="lazy">
+                            </div>
+                            <div class="ref-cert-body">
+                                <h4 class="ref-cert-title">All India NCAT 2026</h4>
+                                <span class="ref-cert-issuer">Naukri Campus</span>
+                                <span class="ref-cert-date">June 2026 • Score 48/60 (Top 4000)</span>
+                                <div class="ref-cert-actions">
+                                    <button class="ref-cert-link btn-trigger-lightbox" data-cert-img="assets/certificates/cert_naukri_ncat_2026.jpg" data-cert-title="All India NCAT 2026 (Score 48/60)" data-cert-issuer="Naukri Campus" data-cert-date="June 2026" data-cert-verify="">
+                                        View Certificate <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. AWS Academy Graduate – Data Engineering Training Badge -->
+                    <div class="cert-item-col" data-cert-cat="cloud">
+                        <div class="ref-cert-card">
+                            <div class="ref-cert-media btn-trigger-lightbox" data-cert-img="assets/certificates/cert_aws_academy_graduate_data_engineering.jpg" data-cert-title="AWS Academy Graduate – Data Engineering – Training Badge" data-cert-issuer="Amazon Web Services (AWS)" data-cert-date="June 2026" data-cert-verify="">
+                                <img src="assets/certificates/cert_aws_academy_graduate_data_engineering.jpg" alt="AWS Academy Graduate Data Engineering" class="ref-cert-img" loading="lazy">
+                            </div>
+                            <div class="ref-cert-body">
+                                <h4 class="ref-cert-title">AWS Academy Data Eng.</h4>
+                                <span class="ref-cert-issuer">Amazon Web Services (AWS)</span>
+                                <span class="ref-cert-date">June 2026</span>
+                                <div class="ref-cert-actions">
+                                    <button class="ref-cert-link btn-trigger-lightbox" data-cert-img="assets/certificates/cert_aws_academy_graduate_data_engineering.jpg" data-cert-title="AWS Academy Graduate – Data Engineering" data-cert-issuer="Amazon Web Services (AWS)" data-cert-date="June 2026" data-cert-verify="">
+                                        View Badge <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Introduction to Data Science -->
+                    <div class="cert-item-col" data-cert-cat="aiml">
+                        <div class="ref-cert-card">
+                            <div class="ref-cert-media btn-trigger-lightbox" data-cert-img="assets/certificates/cert_infosys_data_science.jpg" data-cert-title="Introduction to Data Science" data-cert-issuer="Infosys Springboard" data-cert-date="July 2025" data-cert-verify="">
+                                <img src="assets/certificates/cert_infosys_data_science.jpg" alt="Introduction to Data Science - Infosys Springboard" class="ref-cert-img" loading="lazy">
+                            </div>
+                            <div class="ref-cert-body">
+                                <h4 class="ref-cert-title">Intro to Data Science</h4>
+                                <span class="ref-cert-issuer">Infosys Springboard</span>
+                                <span class="ref-cert-date">July 2025</span>
+                                <div class="ref-cert-actions">
+                                    <button class="ref-cert-link btn-trigger-lightbox" data-cert-img="assets/certificates/cert_infosys_data_science.jpg" data-cert-title="Introduction to Data Science" data-cert-issuer="Infosys Springboard" data-cert-date="July 2025" data-cert-verify="">
+                                        View Certificate <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10. GenAI Powered Data Analytics Job Simulation -->
+                    <div class="cert-item-col" data-cert-cat="simulation">
+                        <div class="ref-cert-card">
+                            <div class="ref-cert-media btn-trigger-lightbox" data-cert-img="assets/certificates/cert_tcs_genai_data_analytics.jpg" data-cert-title="GenAI Powered Data Analytics Job Simulation" data-cert-issuer="Tata Consultancy Services" data-cert-date="February 2026" data-cert-verify="">
+                                <img src="assets/certificates/cert_tcs_genai_data_analytics.jpg" alt="GenAI Data Analytics Job Simulation - TCS" class="ref-cert-img" loading="lazy">
+                            </div>
+                            <div class="ref-cert-body">
+                                <h4 class="ref-cert-title">GenAI Data Analytics</h4>
+                                <span class="ref-cert-issuer">Tata Consultancy Services</span>
+                                <span class="ref-cert-date">February 2026</span>
+                                <div class="ref-cert-actions">
+                                    <button class="ref-cert-link btn-trigger-lightbox" data-cert-img="assets/certificates/cert_tcs_genai_data_analytics.jpg" data-cert-title="GenAI Powered Data Analytics Job Simulation" data-cert-issuer="Tata Consultancy Services" data-cert-date="February 2026" data-cert-verify="">
+                                        View Simulation <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 11. Software Engineering Job Simulation -->
+                    <div class="cert-item-col" data-cert-cat="simulation">
+                        <div class="ref-cert-card">
+                            <div class="ref-cert-media btn-trigger-lightbox" data-cert-img="assets/certificates/cert_jpmorgan_software_engineering.jpg" data-cert-title="Software Engineering Job Simulation" data-cert-issuer="JPMorganChase" data-cert-date="February 2026" data-cert-verify="">
+                                <img src="assets/certificates/cert_jpmorgan_software_engineering.jpg" alt="Software Engineering Job Simulation - JPMorganChase" class="ref-cert-img" loading="lazy">
+                            </div>
+                            <div class="ref-cert-body">
+                                <h4 class="ref-cert-title">Software Engineering</h4>
+                                <span class="ref-cert-issuer">JPMorganChase</span>
+                                <span class="ref-cert-date">February 2026</span>
+                                <div class="ref-cert-actions">
+                                    <button class="ref-cert-link btn-trigger-lightbox" data-cert-img="assets/certificates/cert_jpmorgan_software_engineering.jpg" data-cert-title="Software Engineering Job Simulation" data-cert-issuer="JPMorganChase" data-cert-date="February 2026" data-cert-verify="">
+                                        View Simulation <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 12. Data Analytics Job Simulation -->
+                    <div class="cert-item-col" data-cert-cat="simulation">
+                        <div class="ref-cert-card">
+                            <div class="ref-cert-media btn-trigger-lightbox" data-cert-img="assets/certificates/cert_deloitte_data_analytics.jpg" data-cert-title="Data Analytics Job Simulation" data-cert-issuer="Deloitte" data-cert-date="July 2025" data-cert-verify="">
+                                <img src="assets/certificates/cert_deloitte_data_analytics.jpg" alt="Data Analytics Job Simulation - Deloitte" class="ref-cert-img" loading="lazy">
+                            </div>
+                            <div class="ref-cert-body">
+                                <h4 class="ref-cert-title">Data Analytics Simulation</h4>
+                                <span class="ref-cert-issuer">Deloitte</span>
+                                <span class="ref-cert-date">July 2025</span>
+                                <div class="ref-cert-actions">
+                                    <button class="ref-cert-link btn-trigger-lightbox" data-cert-img="assets/certificates/cert_deloitte_data_analytics.jpg" data-cert-title="Data Analytics Job Simulation" data-cert-issuer="Deloitte" data-cert-date="July 2025" data-cert-verify="">
+                                        View Simulation <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==============================================
+             LET'S CONNECT & FOOTER
+             ============================================== -->
+        <section id="contact" class="footer-cta-banner">
+            <div class="container-fluid px-lg-5">
+                
+                <div class="footer-banner-card">
+                    <div class="row g-4 align-items-center">
+                        
+                        <!-- Left Column: Contact Channels & Invitation -->
+                        <div class="col-lg-6">
+                            <div class="banner-content-inner">
+                                <div class="section-tag-kicker" id="contact-label">
+                                    <span class="kicker-accent-bar"></span>
+                                    <span>LET'S CONNECT</span>
+                                </div>
+                                <h2 class="banner-title">Let's Build Something Meaningful.</h2>
+                                <p class="banner-desc">
+                                    I'm always open to discussing new opportunities, full-stack software projects, cloud data engineering architectures, or innovative data science ideas.
+                                </p>
+
+                                <!-- Direct Contact Cards -->
+                                <div class="banner-contact-chips mb-4">
+                                    <a href="mailto:rehanraza000@gmail.com" class="banner-chip" title="Direct Email">
+                                        <i class="fas fa-envelope text-cyan"></i>
+                                        <span>rehanraza000@gmail.com</span>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/rehan-raza-b45bb6306" target="_blank" rel="noopener noreferrer" class="banner-chip" title="LinkedIn Profile">
+                                        <i class="fab fa-linkedin-in text-info"></i>
+                                        <span>linkedin.com/in/rehan-raza-b45bb6306</span>
+                                    </a>
+                                    <a href="https://github.com/Rehanraza009" target="_blank" rel="noopener noreferrer" class="banner-chip" title="GitHub Profile">
+                                        <i class="fab fa-github"></i>
+                                        <span>github.com/Rehanraza009</span>
+                                    </a>
+                                </div>
+
+                                <div class="d-flex flex-wrap align-items-center gap-3">
+                                    <button class="btn-ref-action btn-ref-secondary btn-copy-email-action" aria-label="Copy email address">
+                                        <i class="fas fa-copy me-1"></i> Copy Email
+                                    </button>
+                                    <a href="https://www.linkedin.com/in/rehan-raza-b45bb6306" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-primary">
+                                        <i class="fab fa-linkedin-in me-1"></i> Connect on LinkedIn
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Interactive Send a Message Form -->
+                        <div class="col-lg-6">
+                            <div class="contact-form-glass-card">
+                                <h4 class="form-title mb-3"><i class="fas fa-paper-plane text-cyan me-2"></i> Send a Direct Message</h4>
+                                <form id="portfolio-contact-form" onsubmit="event.preventDefault(); handleContactSubmit();">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="contact-name" class="form-label">Your Name</label>
+                                            <input type="text" id="contact-name" class="form-control-custom" placeholder="e.g. John Doe" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="contact-email" class="form-label">Your Email</label>
+                                            <input type="email" id="contact-email" class="form-control-custom" placeholder="name@company.com" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="contact-subject" class="form-label">Subject</label>
+                                            <input type="text" id="contact-subject" class="form-control-custom" placeholder="Opportunity / Project Inquiry" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="contact-message" class="form-label">Message</label>
+                                            <textarea id="contact-message" class="form-control-custom" rows="3" placeholder="Tell me about your project or opportunity..." required></textarea>
+                                        </div>
+                                        <div class="col-12 text-end">
+                                            <button type="submit" class="btn-magnetic btn-magnetic-primary w-100">
+                                                <span>Send Message</span>
+                                                <i class="fas fa-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Bottom Metadata Strip with Slogan and Cursive Signature -->
+                    <div class="banner-bottom-meta mt-5">
+                        <div>
+                            &copy; <span id="current-year"></span> <strong>Rehan Raza</strong>. Deployed on GitHub Pages at <a href="https://rehanraza009.github.io/portfolios/" class="text-cyan text-decoration-none">/portfolios/</a>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="footer-slogan d-none d-md-inline">&quot;Using technology to solve real problems and create a better future.&quot;</span>
+                            <span class="footer-cursive-signature">Rehan Raza</span>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
+
     </main>
 
-    <footer class="main-footer">
-        <div class="container text-center">
-            <div class="footer-social-links">
-                <a href="https://github.com/rehanraza099" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rehan-raza-b45bb6306" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/re_haannnn/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <!-- ==============================================
+         CURATED RESUME SELECTION MODAL
+         ============================================== -->
+    <div class="resume-modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" aria-hidden="true">
+        <div class="resume-modal-dialog">
+            <div class="resume-modal-header">
+                <div class="resume-modal-title-wrap">
+                    <div class="resume-modal-badge"><i class="fas fa-file-invoice"></i> Official Credentials</div>
+                    <h3 class="resume-modal-title" id="resume-modal-title">Select Resume by Specialization</h3>
+                    <p class="resume-modal-subtitle">Choose from verified resumes customized for distinct technical roles.</p>
+                </div>
+                <button type="button" class="resume-modal-close-btn" id="resume-modal-close" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-            <div class="footer-copyright">
-                <p>&copy; 2026 Rehan Raza. All rights reserved.</p>
+            
+            <div class="resume-modal-body">
+                <div class="resume-cards-grid">
+                    
+                    <!-- 1. Data Analyst Resume -->
+                    <div class="resume-card">
+                        <div class="resume-card-tag"><i class="fas fa-chart-pie text-purple"></i> Analytics</div>
+                        <h4 class="resume-card-title">Data Analyst Resume</h4>
+                        <p class="resume-card-desc">Data analysis, SQL, Python, dashboards, reporting, and analytics.</p>
+                        <div class="resume-card-actions">
+                            <a href="assets/resumes/Data%20Analyst.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume-action btn-resume-view">
+                                <i class="fas fa-eye"></i> View PDF
+                            </a>
+                            <a href="assets/resumes/Data%20Analyst.pdf" download="Rehan_Raza_Data_Analyst_Resume.pdf" class="btn-resume-action btn-resume-download">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 2. Full-Stack AI Developer Resume -->
+                    <div class="resume-card">
+                        <div class="resume-card-tag"><i class="fas fa-brain text-info"></i> AI &amp; Full-Stack</div>
+                        <h4 class="resume-card-title">Full-Stack AI Developer</h4>
+                        <p class="resume-card-desc">Full-stack development, AI, RAG applications, backend APIs, and LLM-powered systems.</p>
+                        <div class="resume-card-actions">
+                            <a href="assets/resumes/Full-Stack%20AI%20Devloper.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume-action btn-resume-view">
+                                <i class="fas fa-eye"></i> View PDF
+                            </a>
+                            <a href="assets/resumes/Full-Stack%20AI%20Devloper.pdf" download="Rehan_Raza_FullStack_AI_Developer_Resume.pdf" class="btn-resume-action btn-resume-download">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 3. SDE Resume -->
+                    <div class="resume-card">
+                        <div class="resume-card-tag"><i class="fas fa-laptop-code text-cyan"></i> Software Engineering</div>
+                        <h4 class="resume-card-title">SDE Resume</h4>
+                        <p class="resume-card-desc">Software engineering, backend development, APIs, DSA, testing, and problem-solving.</p>
+                        <div class="resume-card-actions">
+                            <a href="assets/resumes/SDE_Resume(2).pdf" target="_blank" rel="noopener noreferrer" class="btn-resume-action btn-resume-view">
+                                <i class="fas fa-eye"></i> View PDF
+                            </a>
+                            <a href="assets/resumes/SDE_Resume(2).pdf" download="Rehan_Raza_SDE_Resume.pdf" class="btn-resume-action btn-resume-download">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 4. Software Developer Resume -->
+                    <div class="resume-card">
+                        <div class="resume-card-tag"><i class="fas fa-code text-success"></i> Development</div>
+                        <h4 class="resume-card-title">Software Developer</h4>
+                        <p class="resume-card-desc">Software development, programming, backend systems, and full-stack projects.</p>
+                        <div class="resume-card-actions">
+                            <a href="assets/resumes/Software%20Developers.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume-action btn-resume-view">
+                                <i class="fas fa-eye"></i> View PDF
+                            </a>
+                            <a href="assets/resumes/Software%20Developers.pdf" download="Rehan_Raza_Software_Developer_Resume.pdf" class="btn-resume-action btn-resume-download">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="resume-modal-footer">
+                <span class="resume-footer-note"><i class="fas fa-shield-alt text-cyan"></i> Verified &amp; authentic credentials of Rehan Raza.</span>
+                <button type="button" class="btn-resume-dismiss" id="resume-modal-done">Done</button>
             </div>
         </div>
-    </footer>
+    </div>
 
-    <button class="back-to-top" id="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-        <svg class="progress-ring" width="50" height="50">
-            <circle class="progress-ring__circle" stroke="var(--primary)" stroke-width="3" fill="transparent" r="22" cx="25" cy="25"/>
-        </svg>
-    </button>
-
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <div class="modal-body">
-                <div class="modal-image">
-                    <img src="" alt="Project Image" id="modal-project-image">
-                </div>
-                <div class="modal-info">
-                    <h3 id="modal-project-title"></h3>
-                    <p id="modal-project-description"></p>
-                    <p><strong>Technologies:</strong> <span id="modal-project-tech"></span></p>
-                    <div class="modal-links">
-                        <a href="#" id="modal-project-github" target="_blank" class="btn secondary-btn">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                        <a href="#" id="modal-project-live" target="_blank" class="btn primary-btn">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
+    <!-- ==============================================
+         STUDIO CERTIFICATE LIGHTBOX MODAL
+         ============================================== -->
+    <div id="studio-lightbox-modal" class="studio-lightbox-backdrop" role="dialog" aria-modal="true" aria-label="Certificate Image Viewer">
+        <div class="lightbox-dialog-card">
+            <button class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Close Preview"><i class="fas fa-times"></i></button>
+            <div class="lightbox-image-viewport">
+                <img id="lightbox-img" src="" alt="Verified Credential Full Resolution" loading="lazy">
+            </div>
+            <div class="lightbox-caption-bar">
+                <div class="caption-text-group">
+                    <h5 id="lightbox-title" class="lightbox-title-text">Certificate Title</h5>
+                    <div class="lightbox-issuer-meta">
+                        <span id="lightbox-issuer" class="text-cyan">Issuing Authority</span>
+                        <span class="meta-dot">•</span>
+                        <span id="lightbox-date" class="text-secondary">Issued Date</span>
                     </div>
+                </div>
+                <div class="caption-action-group">
+                    <a id="lightbox-verify-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-ref-action btn-ref-primary font-xs">
+                        <i class="fas fa-check-circle me-1"></i> Verify Credential
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- 1-Click Clipboard Toast Notification -->
+    <div id="copy-toast" class="copy-toast-banner" role="status" aria-live="polite">
+        <i class="fas fa-check-circle text-cyan me-2"></i>
+        <span id="toast-text">Email copied to clipboard!</span>
+    </div>
+
+    <!-- GSAP 3.12.5 & ScrollTrigger via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Bootstrap 5.3.2 Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Contact Form Handler Mock Script -->
+    <script>
+        function handleContactSubmit() {
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const subject = document.getElementById('contact-subject').value;
+            const message = document.getElementById('contact-message').value;
+            
+            const mailtoUrl = `mailto:rehanraza000@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message)}`;
+            window.location.href = mailtoUrl;
+        }
+    </script>
+
+    <!-- Master Interactive Application Script -->
     <script src="script.js"></script>
 </body>
 </html>
